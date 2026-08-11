@@ -105,3 +105,8 @@ isStudent → Boolean
 - Object is a non-primitive type.
 - "25" is a String.
 - 25 is a Number.
+
+
+typeof - Definition
+typeof is a JavaScript operator used to find the data type of a value.
+console.log(typeof 25);
