@@ -1,0 +1,369 @@
+1. DEFINITION
+
+String methods are built-in JavaScript tools used to work with and manipulate strings.
+
+2. EASY SIMPLE DEFINITION
+
+String methods are ready-made tools JavaScript provides for working with text.
+
+3. toUpperCase()
+
+Converts a string to uppercase.
+
+Example:
+
+let name = "john";
+let result = name.toUpperCase();
+
+Important:
+Strings are immutable, so the original string is not changed automatically.
+
+To store the changed value:
+
+name = name.toUpperCase();
+
+4. toLowerCase()
+
+Converts a string to lowercase.
+
+Example:
+
+let name = "JOHN";
+let result = name.toLowerCase();
+
+Common use:
+
+let answer = "YES";
+
+if (answer.toLowerCase() === "yes") {
+    console.log("Correct");
+}
+
+5. trim()
+
+Removes whitespace from the beginning and end of a string.
+
+Example:
+
+let name = "   John   ";
+let cleanName = name.trim();
+
+trim() does not remove spaces between words.
+
+Example:
+
+"John Doe"
+
+The space between John and Doe remains.
+
+6. includes()
+
+Checks whether a string contains another string.
+
+Example:
+
+let sentence = "I am learning JavaScript";
+
+sentence.includes("JavaScript");
+
+includes() returns a Boolean:
+
+true
+or
+false
+
+Important:
+includes() is case-sensitive.
+
+Example:
+
+let text = "JavaScript";
+
+text.includes("script");
+
+This returns false because:
+"Script" and "script" are different.
+
+For a case-insensitive check:
+
+text.toLowerCase().includes("script");
+
+7. startsWith()
+
+Checks whether a string starts with specific text.
+
+Example:
+
+let word = "JavaScript";
+
+word.startsWith("Java");
+
+8. endsWith()
+
+Checks whether a string ends with specific text.
+
+Example:
+
+let file = "photo.jpg";
+
+file.endsWith(".jpg");
+
+9. indexOf()
+
+Returns the index where specified text first appears.
+
+Example:
+
+let word = "JavaScript";
+
+word.indexOf("Script");
+
+"Script" starts at index 4.
+
+Important:
+JavaScript uses zero-based indexing.
+
+If the searched text is not found:
+
+word.indexOf("Python");
+
+returns:
+
+-1
+
+10. charAt()
+
+Returns the character at a specified index.
+
+Example:
+
+let word = "Hello";
+
+word.charAt(0);
+
+The result is the first character.
+
+Bracket notation can also be used:
+
+word[0];
+
+11. slice()
+
+Extracts part of a string.
+
+Syntax:
+
+string.slice(start, end);
+
+Important rule:
+
+start → included
+end → excluded
+
+Example:
+
+let word = "JavaScript";
+
+let result = word.slice(4, 10);
+
+The result is:
+
+"Script"
+
+Indexes:
+
+J a v a S c r i p t
+0 1 2 3 4 5 6 7 8 9
+
+Indexes 4 through 9 are included.
+Index 10 is excluded.
+
+slice() can also use negative indexes.
+
+Example:
+
+let word = "JavaScript";
+
+word.slice(-6);
+
+12. substring()
+
+Extracts part of a string.
+
+Example:
+
+let word = "JavaScript";
+
+let result = word.substring(0, 4);
+
+Result:
+
+"Java"
+
+slice() and substring() have similar purposes but different behavior in some situations.
+
+13. replace()
+
+Replaces matching text.
+
+Example:
+
+let sentence = "I like Java";
+
+let result = sentence.replace("Java", "JavaScript");
+
+replace() normally replaces the first matching occurrence.
+
+14. replaceAll()
+
+Replaces all matching occurrences.
+
+Example:
+
+let sentence = "Java is fun. Java is powerful.";
+
+let result = sentence.replaceAll("Java", "JavaScript");
+
+15. split()
+
+Converts a string into an array.
+
+Example:
+
+let word = "Hello";
+
+let letters = word.split("");
+
+Conceptually:
+
+"Hello"
+↓
+["H", "e", "l", "l", "o"]
+
+Splitting by spaces:
+
+let sentence = "I love JavaScript";
+
+let words = sentence.split(" ");
+
+Conceptually:
+
+["I", "love", "JavaScript"]
+
+16. join()
+
+join() is an array method, not a string method.
+
+It converts an array into a string.
+
+Example:
+
+let letters = ["H", "e", "l", "l", "o"];
+
+let word = letters.join("");
+
+17. REVERSING A STRING
+
+A common way to reverse a string:
+
+let word = "hello";
+
+let reversed = word.split("").reverse().join("");
+
+Process:
+
+String
+↓
+split("")
+↓
+Array
+↓
+reverse()
+↓
+Array
+↓
+join("")
+↓
+String
+
+18. STRING IMMUTABILITY
+
+Strings are immutable in JavaScript.
+
+This means individual characters cannot be changed directly.
+
+Example:
+
+let word = "Hello";
+
+word[0] = "Y";
+
+This does not change the string into "Yello".
+
+Instead, create a new string.
+
+Example:
+
+word = "Y" + word.slice(1);
+
+19. STRING CONCATENATION
+
+Strings can be combined using +.
+
+Example:
+
+let firstName = "John";
+let lastName = "Doe";
+
+let fullName = firstName + " " + lastName;
+
+20. STRING AND NUMBER WITH +
+
+Be careful when + is used with a String and Number.
+
+Example:
+
+let a = "10";
+let b = 20;
+
+let result = a + b;
+
+The result is:
+
+"1020"
+
+This happens because + performs string concatenation when a String is involved.
+
+21. ZERO-BASED INDEXING
+
+JavaScript string indexes start at 0.
+
+Example:
+
+JavaScript
+0123456789
+
+J → 0
+a → 1
+v → 2
+a → 3
+S → 4
+c → 5
+r → 6
+i → 7
+p → 8
+t → 9
+
+22. IMPORTANT INTERVIEW RULES
+
+- Strings are immutable.
+- String indexes start at 0.
+- includes() is case-sensitive.
+- indexOf() returns -1 when text is not found.
+- slice(start, end) includes start but excludes end.
+- split() converts a string into an array.
+- join() converts an array into a string.
+- join() is an array method.
+- length is a property, not a method.
+- + can concatenate strings.
+- "10" is a String while 10 is a Number.

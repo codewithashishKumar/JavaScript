@@ -1,0 +1,396 @@
+========================================
+JAVASCRIPT - TOPIC : NUMBERS
+========================================
+
+1. DEFINITION
+
+Number is a JavaScript data type used to represent numeric values.
+
+2. EASY SIMPLE DEFINITION
+
+A Number is a value used for calculations and numeric information.
+
+Examples:
+
+10
+25
+-5
+3.14
+99.99
+0
+
+All of these are JavaScript Numbers.
+
+3. CHECKING THE DATA TYPE
+
+Use typeof:
+
+console.log(typeof 25);
+
+console.log(typeof 3.14);
+
+Both are Number values.
+
+4. INTEGERS
+
+An integer is a whole number without a decimal part.
+
+Examples:
+
+let age = 25;
+let count = 100;
+let temperature = -10;
+
+5. DECIMAL NUMBERS
+
+JavaScript Numbers can also contain decimal values.
+
+Examples:
+
+let price = 99.99;
+let pi = 3.14;
+let percentage = 75.5;
+
+6. POSITIVE, NEGATIVE AND ZERO
+
+Positive:
+
+let balance = 500;
+
+Negative:
+
+let temperature = -10;
+
+Zero:
+
+let score = 0;
+
+All are Number values.
+
+7. ADDITION
+
+Use the + operator.
+
+let result = 10 + 5;
+
+8. SUBTRACTION
+
+Use the - operator.
+
+let result = 10 - 5;
+
+9. MULTIPLICATION
+
+Use the * operator.
+
+let result = 10 * 5;
+
+10. DIVISION
+
+Use the / operator.
+
+let result = 10 / 5;
+
+11. REMAINDER OPERATOR %
+
+The % operator gives the remainder left after division.
+
+Example:
+
+10 % 3
+
+Think:
+
+10 ÷ 3
+
+3 × 3 = 9
+
+10 - 9 = 1
+
+Therefore:
+
+10 % 3 → 1
+
+More examples:
+
+17 % 5
+20 % 4
+9 % 2
+
+Important:
+
+/ → division
+% → remainder
+
+12. EXPONENTIATION
+
+The ** operator is used for powers.
+
+Example:
+
+let result = 2 ** 3;
+
+This means:
+
+2 × 2 × 2
+
+13. ORDER OF OPERATIONS
+
+JavaScript follows mathematical operator precedence.
+
+Example:
+
+let result = 10 + 5 * 2;
+
+Multiplication happens before addition.
+
+Parentheses can change the order:
+
+let result = (10 + 5) * 2;
+
+14. INCREMENT
+
+The ++ operator increases a value by 1.
+
+Example:
+
+let count = 5;
+
+count++;
+
+Other ways:
+
+count = count + 1;
+
+count += 1;
+
+15. DECREMENT
+
+The -- operator decreases a value by 1.
+
+Example:
+
+let count = 5;
+
+count--;
+
+Other ways:
+
+count = count - 1;
+
+count -= 1;
+
+16. NaN
+
+NaN means "Not a Number".
+
+It represents an invalid numeric result.
+
+Example:
+
+let result = "hello" * 5;
+
+The result becomes NaN.
+
+IMPORTANT:
+
+Even though NaN means "Not a Number", JavaScript considers NaN to be part of the Number data type.
+
+Example:
+
+typeof NaN
+
+returns the type:
+
+"number"
+
+17. INFINITY
+
+JavaScript has Infinity and -Infinity.
+
+Example:
+
+let result = 10 / 0;
+
+Another example:
+
+let result = -10 / 0;
+
+Infinity is also part of the Number data type.
+
+18. CONVERTING A STRING TO A NUMBER
+
+Use Number() to convert a value into a Number.
+
+Example:
+
+let age = Number("25");
+
+"25" is a String.
+
+Number("25") converts it into a Number.
+
+19. INVALID NUMBER CONVERSION
+
+If JavaScript cannot convert the value into a valid Number:
+
+let value = Number("hello");
+
+The result becomes NaN.
+
+20. parseInt()
+
+parseInt() is commonly used to convert or parse a value as an integer.
+
+Example:
+
+let value = parseInt("25");
+
+It can also extract the integer portion from a decimal string.
+
+Example:
+
+parseInt("25.99");
+
+21. parseFloat()
+
+parseFloat() is commonly used to parse a decimal number.
+
+Example:
+
+let price = parseFloat("99.99");
+
+Basic difference:
+
+parseInt() → integer
+parseFloat() → decimal
+
+22. Number.isNaN()
+
+Number.isNaN() checks whether a value is actually NaN.
+
+Example:
+
+Number.isNaN(NaN);
+
+It returns a Boolean value.
+
+23. Number.isInteger()
+
+Number.isInteger() checks whether a value is an integer.
+
+Example:
+
+Number.isInteger(25);
+
+A decimal is not an integer:
+
+Number.isInteger(25.5);
+
+24. NUMBER PRECISION
+
+JavaScript Numbers use floating-point representation.
+
+Because of this, some decimal calculations can produce surprising results.
+
+Example:
+
+0.1 + 0.2
+
+You may expect exactly 0.3, but floating-point representation means the result is not represented exactly as decimal 0.3.
+
+This is an important JavaScript interview concept.
+
+25. TYPE COERCION WITH NUMBERS
+
+JavaScript can automatically convert values between types in some operations.
+
+Example:
+
+let result = "25" - 5;
+
+The String "25" is converted into the Number 25.
+
+Therefore:
+
+25 - 5
+
+is calculated.
+
+26. + WITH A STRING
+
+The + operator behaves differently when a String is involved.
+
+Example:
+
+let result = "25" + 5;
+
+The result is string concatenation.
+
+27. - WITH A STRING
+
+The - operator converts a numeric string to a Number when possible.
+
+Example:
+
+let result = "25" - 5;
+
+The string "25" is converted into the Number 25.
+
+28. * WITH A STRING
+
+The * operator can also convert a numeric string into a Number.
+
+Example:
+
+let result = "10" * 2;
+
+"10" is converted to 10 before multiplication.
+
+29. / WITH A STRING
+
+The / operator can convert a numeric string into a Number.
+
+Example:
+
+let result = "10" / 2;
+
+30. IMPORTANT INTERVIEW RULES
+
+- JavaScript has one main Number data type for integers and decimals.
+- Integers and decimal values are both Numbers.
+- % gives the remainder after division.
+- / performs division.
+- ** performs exponentiation.
+- ++ increases a value by 1.
+- -- decreases a value by 1.
+- NaN means an invalid numeric result.
+- typeof NaN is "number".
+- Infinity is also a Number.
+- Number() converts values to Numbers when possible.
+- parseInt() is used for integer parsing.
+- parseFloat() is used for decimal parsing.
+- Number.isNaN() checks for NaN.
+- Number.isInteger() checks for integers.
+- JavaScript Numbers use floating-point representation.
+- Decimal calculations can have floating-point precision issues.
+- String + Number can result in string concatenation.
+- -, *, and / can convert numeric strings into Numbers.
+
+31. IMPORTANT EXAMPLES
+
+let price = 99.99;
+let quantity = 3;
+let total = price * quantity;
+
+let remainder = 17 % 5;
+
+let power = 2 ** 3;
+
+let age = Number("25");
+
+let invalid = Number("hello");
+
+let integer = parseInt("25.99");
+
+let decimal = parseFloat("25.99");
