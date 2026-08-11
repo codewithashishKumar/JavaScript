@@ -1,0 +1,1 @@
+JavaScript is a high-level, dynamically typed programming language used mainly to build interactive and dynamic web applications. It runs in browsers and can also be used on the server side with Node.js. It supports concepts like functions, objects, asynchronous programming, events, and DOM manipulation.
