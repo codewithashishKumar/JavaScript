@@ -1,0 +1,107 @@
+========================================
+JAVASCRIPT - TOPIC : DATA TYPES
+========================================
+1. DEFINITION
+A data type tells JavaScript what kind of value something is.
+
+2. EASY SIMPLE DEFINITION
+Data type = The kind of value you are working with.
+
+Examples:
+"John" → Text
+25 → Number
+true → True/False
+
+3. THE 8 JAVASCRIPT DATA TYPES
+JavaScript has 8 main built-in data types:
+
+1. String
+2. Number
+3. BigInt
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
+
+4. PRIMITIVE DATA TYPES
+The primitive data types are:
+
+- String
+- Number
+- BigInt
+- Boolean
+- Undefined
+- Null
+- Symbol
+
+5. NON-PRIMITIVE DATA TYPE
+Object is the main non-primitive data type.
+
+6. STRING
+A String represents text.
+
+Example:
+
+let name = "John";
+
+"John" is a String.
+
+7. NUMBER
+A Number represents numeric values.
+
+Example:
+
+let age = 25;
+
+25 is a Number.
+
+8. BOOLEAN
+A Boolean has two possible values:
+
+true
+false
+
+Example:
+
+let isStudent = true;
+
+true is a Boolean.
+
+9. IMPORTANT DIFFERENCE
+Quotes can change a value's data type.
+
+Example:
+
+"25" → String
+25 → Number
+
+"25" is text.
+25 is a number.
+
+10. EXAMPLES
+let name = "Alex";
+let age = 25;
+let isStudent = true;
+
+Data types:
+
+name → String
+age → Number
+isStudent → Boolean
+
+11. WHAT I LEARNED
+- A data type tells JavaScript what kind of value something is.
+- JavaScript has 8 main built-in data types.
+- String is used for text.
+- Number is used for numbers.
+- Boolean contains true or false.
+- BigInt is used for very large integers.
+- Undefined represents an unassigned value.
+- Null represents an intentional absence of value.
+- Symbol represents a unique identifier.
+- Object stores collections of related data.
+- String, Number, BigInt, Boolean, Undefined, Null, and Symbol are primitive types.
+- Object is a non-primitive type.
+- "25" is a String.
+- 25 is a Number.
