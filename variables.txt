@@ -1,0 +1,84 @@
+1. DEFINITION
+A variable is a named container used to store a value in a JavaScript program.
+
+2. EASY SIMPLE DEFINITION
+A variable is a named place where we can store information.
+
+Think of a variable like a labeled box:
+name → "John"
+age → 20
+
+3. CREATING A VARIABLE WITH let
+The basic syntax is:
+
+let variableName = value;
+
+Example:
+
+let name = "John";
+let age = 20;
+
+Here:
+name → "John"
+age → 20
+
+4. BREAKING DOWN A VARIABLE
+Example:
+
+let name = "John";
+
+let → tells JavaScript to create a variable
+name → variable name
+= → assigns a value
+"John" → value
+
+5. USING A VARIABLE
+Example:
+
+let name = "John";
+
+console.log(name);
+
+Instead of writing the value directly every time, we can use the variable name.
+
+6. CHANGING A VARIABLE
+A variable created with let can have its value changed.
+
+Example:
+
+let age = 20;
+
+age = 21;
+
+The value stored in age has been changed.
+
+7. IMPORTANT CONCEPT
+let is used to create a variable whose value can be changed later.
+
+Example:
+
+let score = 50;
+
+score = 100;
+
+The same variable is used, but its value changes.
+
+8. VARIABLE STRUCTURE
+Example:
+
+let username = "Alex";
+
+let → creates the variable
+username → variable name
+= → assignment
+"Alex" → value
+
+9. WHAT I LEARNED
+- A variable stores information.
+- A variable has a name.
+- A variable has a value.
+- let is used to create a variable.
+- The variable name identifies the stored value.
+- The = symbol assigns a value.
+- A variable created with let can be changed later.
+- Changing a variable does not create a new variable.
