@@ -1,0 +1,29 @@
+| Topic                        | Explanation                                                                                                                   | Example                                                                   |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Functions — Introduction** | A function is a reusable block of code designed to perform a task.                                                            | `function greet() { console.log("Hello"); }`                              |
+| **Parameters & Arguments**   | **Parameters** are variables defined in a function. **Arguments** are the actual values passed to it.                         | `function add(a, b) { return a + b; }` → `add(2, 3)`                      |
+| **Return Values**            | `return` sends a value back to the code that called the function.                                                             | `function square(n) { return n * n; }`                                    |
+| **Function Expressions**     | A function can be stored inside a variable.                                                                                   | `const greet = function() { console.log("Hi"); };`                        |
+| **Arrow Functions**          | A shorter syntax for writing functions.                                                                                       | `const add = (a, b) => a + b;`                                            |
+| **Default Parameters**       | Parameters can have default values when no argument is provided.                                                              | `function greet(name = "Guest") { return "Hello " + name; }`              |
+| **Rest Parameters**          | `...` collects multiple arguments into an array.                                                                              | `function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }` |
+| **Scope**                    | Scope determines where variables can be accessed. Common types are global, function, and block scope.                         | `let x = 10; { let y = 20; }` — `y` is only accessible inside the block.  |
+| **Closures**                 | A closure occurs when a function remembers variables from its surrounding scope even after that scope has finished executing. | `function counter() { let n = 0; return () => ++n; }`                     |
+| **Higher-Order Functions**   | A function that takes another function as an argument or returns a function.                                                  | `[1,2,3].map(x => x * 2)`                                                 |
+| **Callback Functions**       | A function passed to another function to be executed later or during an operation.                                            | `setTimeout(() => console.log("Done"), 1000);`                            |
+
+
+// Function Declaration
+function greet() {
+    console.log("Hello");
+}
+
+// Function Expression
+const greet = function() {
+    console.log("Hello");
+};
+
+// Arrow Function
+const greet = () => {
+    console.log("Hello");
+};
