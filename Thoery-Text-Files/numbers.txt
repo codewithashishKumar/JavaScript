@@ -394,3 +394,41 @@ let invalid = Number("hello");
 let integer = parseInt("25.99");
 
 let decimal = parseFloat("25.99");
+
+
+
+
+| Feature                   | Number             | BigInt     |
+| ------------------------- | ------------------ | ---------- |
+| Integers                  | ✅                  | ✅          |
+| Decimals                  | ✅                  | ❌          |
+| Very large exact integers | Limited safe range | ✅          |
+| `typeof`                  | `"number"`         | `"bigint"` |
+| Decimal arithmetic        | ✅                  | ❌          |
+| `100 + 50`                | ✅                  | —          |
+| `100n + 50n`              | —                  | ✅          |
+| Mix directly with `+`     | —                  | ❌          |
+| Uses `n` suffix           | ❌                  | ✅          |
+
+
+Operator Precedence - A simplified order to remember:
+1. ()
+2. ++ -- !
+3. * / %
+4. + -
+5. < > <= >=
+6. === !==
+7. &&
+8. ||
+9. ?:
+10. = += -= *= ...
+
+
+Type Coercion------:
+| Expression    |  Result | Why                               |
+| ------------- | ------: | --------------------------------- |
+| `"10" + 5`    | `"105"` | `+` with a string → concatenation |
+| `"10" - 5`    |     `5` | `-` converts `"10"` → number      |
+| `10 == "10"`  |  `true` | `==` allows coercion              |
+| `10 === "10"` | `false` | `===` checks type + value         |
+| `true + 2`    |     `3` | `true` → `1`                      |

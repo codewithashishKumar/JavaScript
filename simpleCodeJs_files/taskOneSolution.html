@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+</head>
+
+<body>
+    Check Console
+</body>
+
+<script>
+    const johnScore = 80;
+    const nickScore = 45;
+    const passScore = 51;
+
+    if (johnScore >= passScore && nickScore >= passScore) {
+        console.log("Both Passed");
+    } else if (johnScore >= passScore || nickScore >= passScore) {
+        console.log("One of them Passed");
+        if (johnScore > nickScore) {
+            console.log('and it is John with ' + johnScore + ' points')
+        } else {
+            console.log('and it is Nick with ' + nickScore + ' points')
+        }
+    } else {
+        console.log("both failed")
+    }
+
+
+</script>
+
+</html>

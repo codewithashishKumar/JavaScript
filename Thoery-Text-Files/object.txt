@@ -1,0 +1,713 @@
+JAVASCRIPT — OBJECTS
+
+1. DEFINITION
+
+An Object is a JavaScript data type used to store related data and functionality together using key-value pairs.
+
+2. EASY SIMPLE DEFINITION
+
+An Object is a collection of related information stored using:
+
+key: value
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25,
+    city: "Meerut"
+};
+
+Here:
+
+name → key
+"John" → value
+
+age → key
+25 → value
+
+city → key
+"Meerut" → value
+
+3. CREATING AN EMPTY OBJECT
+
+An empty Object can be created using curly braces:
+
+let person = {};
+
+Properties can be added later.
+
+4. OBJECT LITERAL
+
+Creating an Object directly with properties is called an Object Literal.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+Object literals are one of the most common ways to create Objects in JavaScript.
+
+5. OBJECT PROPERTIES
+
+The data stored inside an Object is called a property.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+The Object has two properties:
+
+name
+age
+
+Each property consists of:
+
+key: value
+
+6. KEY AND VALUE
+
+Example:
+
+let person = {
+    name: "John"
+};
+
+Here:
+
+name → key
+
+"John" → value
+
+The key identifies the property.
+
+The value contains the actual data.
+
+7. MULTIPLE PROPERTIES
+
+An Object can contain multiple properties.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25,
+    city: "Meerut",
+    isStudent: true
+};
+
+Different properties can contain different data types.
+
+8. ACCESSING OBJECT PROPERTIES
+
+There are two main ways to access Object properties:
+
+1. Dot notation
+2. Bracket notation
+
+9. DOT NOTATION
+
+Use a dot followed by the property name.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+person.name;
+
+person.age;
+
+Dot notation is the simplest and most commonly used way to access a property.
+
+10. BRACKET NOTATION
+
+Bracket notation uses square brackets.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+person["name"];
+
+person["age"];
+
+11. DOT NOTATION VS BRACKET NOTATION
+
+Both can access the same property.
+
+Dot notation:
+
+person.name;
+
+Bracket notation:
+
+person["name"];
+
+Important difference:
+
+let key = "name";
+
+person[key];
+
+Here JavaScript uses the value stored inside the variable key.
+
+12. DYNAMIC PROPERTY ACCESS
+
+Bracket notation is useful when the property name is stored inside a variable.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+let key = "age";
+
+person[key];
+
+The variable key contains the property name.
+
+Therefore bracket notation is commonly used for dynamic property access.
+
+13. IMPORTANT DIFFERENCE
+
+Consider:
+
+let key = "name";
+
+These are different:
+
+person[key];
+
+person["key"];
+
+person.key;
+
+person[key] uses the value stored inside key.
+
+person["key"] looks for a property literally named "key".
+
+person.key also looks for a property literally named key.
+
+14. ADDING A NEW PROPERTY
+
+A new property can be added after creating an Object.
+
+Example:
+
+let person = {
+    name: "John"
+};
+
+person.age = 25;
+
+Another way:
+
+person["city"] = "Meerut";
+
+15. UPDATING A PROPERTY
+
+An existing property can be changed by assigning a new value.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+person.age = 30;
+
+The property age is updated with a new value.
+
+16. UPDATING USING BRACKET NOTATION
+
+Properties can also be updated using bracket notation.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+person["age"] = 30;
+
+17. DELETING A PROPERTY
+
+The delete operator removes a property from an Object.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+delete person.age;
+
+Another way:
+
+delete person["age"];
+
+18. ACCESSING A PROPERTY THAT DOES NOT EXIST
+
+If you try to access a property that does not exist:
+
+let person = {
+    name: "John"
+};
+
+person.age;
+
+JavaScript treats the missing property as undefined.
+
+This connects directly with the undefined topic.
+
+19. OBJECT VALUES CAN BE DIFFERENT DATA TYPES
+
+Object properties can contain different JavaScript data types.
+
+Example:
+
+let user = {
+    name: "John",
+    age: 25,
+    isLoggedIn: true,
+    score: null
+};
+
+An Object can contain:
+
+String
+Number
+Boolean
+null
+undefined
+BigInt
+Symbol
+Array
+Object
+Function
+
+20. OBJECT WITH AN ARRAY
+
+An Object can contain an Array as a property.
+
+Example:
+
+let person = {
+    name: "John",
+    hobbies: ["Coding", "Reading", "Gaming"]
+};
+
+The Array can be accessed using:
+
+person.hobbies;
+
+An individual element can be accessed using:
+
+person.hobbies[0];
+
+21. OBJECT WITH AN OBJECT
+
+An Object can contain another Object.
+
+This is called a nested Object.
+
+Example:
+
+let person = {
+    name: "John",
+    address: {
+        city: "Meerut",
+        country: "India"
+    }
+};
+
+The nested property can be accessed using:
+
+person.address.city;
+
+22. NESTED OBJECTS
+
+Objects can have multiple levels of nesting.
+
+Example:
+
+let company = {
+    name: "ABC",
+    address: {
+        city: "Meerut",
+        location: {
+            country: "India"
+        }
+    }
+};
+
+Nested properties can be accessed by chaining property names.
+
+23. OBJECT WITH A FUNCTION
+
+A function can be stored as an Object property.
+
+Example:
+
+let person = {
+    name: "John",
+
+    greet: function() {
+        console.log("Hello");
+    }
+};
+
+A function stored inside an Object is commonly called a method.
+
+24. OBJECT METHOD
+
+Example:
+
+let person = {
+    name: "John",
+
+    greet: function() {
+        console.log("Hello");
+    }
+};
+
+The method can be called using:
+
+person.greet();
+
+We will study Object methods and the this keyword in detail later.
+
+25. OBJECT WITH BOOLEAN VALUES
+
+Objects can store Boolean values.
+
+Example:
+
+let user = {
+    name: "John",
+    isLoggedIn: true,
+    isAdmin: false
+};
+
+Boolean property names commonly use prefixes such as:
+
+is
+has
+can
+
+Examples:
+
+isLoggedIn
+isAdmin
+hasPermission
+canEdit
+
+26. OBJECT WITH NULL
+
+An Object property can intentionally contain null.
+
+Example:
+
+let user = {
+    name: "John",
+    profilePicture: null
+};
+
+This can represent an intentionally empty value.
+
+27. OBJECT WITH UNDEFINED
+
+An Object property can also contain undefined.
+
+Example:
+
+let user = {
+    name: "John",
+    age: undefined
+};
+
+However, remember that accessing a property that does not exist also gives undefined.
+
+28. CHECKING THE DATA TYPE
+
+Use typeof:
+
+let person = {};
+
+console.log(typeof person);
+
+Objects belong to the "object" result category returned by typeof.
+
+29. ARRAYS AND OBJECTS
+
+Arrays are also technically Objects in JavaScript.
+
+Example:
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+Arrays have special behavior for storing ordered collections.
+
+Objects are generally used for key-value data.
+
+We will study Arrays separately and in detail.
+
+30. OBJECT PROPERTY KEYS
+
+Object property keys are commonly Strings.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+The property names are:
+
+name
+age
+
+Symbols can also be used as Object property keys.
+
+31. SYMBOL AS AN OBJECT PROPERTY KEY
+
+Example:
+
+let id = Symbol("userId");
+
+let user = {
+    name: "John",
+    [id]: 123
+};
+
+The Symbol creates a unique property key.
+
+This connects with the Symbol topic.
+
+32. COMPUTED PROPERTY NAMES
+
+Square brackets can be used while creating an Object to dynamically determine a property name.
+
+Example:
+
+let key = "name";
+
+let person = {
+    [key]: "John"
+};
+
+The value of key is used as the property name.
+
+33. OBJECT REFERENCES
+
+Objects behave differently from primitive values.
+
+Example:
+
+let person1 = {
+    name: "John"
+};
+
+let person2 = person1;
+
+Both variables refer to the same Object.
+
+Changing the Object through one variable can therefore affect what is seen through the other variable.
+
+34. REFERENCE BEHAVIOR
+
+Example:
+
+let person1 = {
+    name: "John"
+};
+
+let person2 = person1;
+
+person2.name = "Alex";
+
+person1 and person2 refer to the same Object.
+
+This concept is extremely important for understanding:
+
+object copying
+object comparison
+functions
+arrays
+spread syntax
+destructuring
+
+and many interview questions.
+
+35. OBJECT COMPARISON
+
+Two separately created Objects are different references even if their properties look identical.
+
+Example:
+
+let person1 = {
+    name: "John"
+};
+
+let person2 = {
+    name: "John"
+};
+
+Comparing Objects with === compares their references, not whether their contents look the same.
+
+36. OBJECT PROPERTY EXISTENCE
+
+JavaScript provides ways to check whether an Object contains a property.
+
+One common method is:
+
+object.hasOwnProperty("propertyName");
+
+Example:
+
+let person = {
+    name: "John"
+};
+
+person.hasOwnProperty("name");
+
+We will study property-checking methods in detail.
+
+37. OBJECT KEYS
+
+JavaScript provides:
+
+Object.keys()
+
+It is used to work with an Object's property keys.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+Object.keys(person);
+
+38. OBJECT VALUES
+
+JavaScript provides:
+
+Object.values()
+
+It is used to work with an Object's property values.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+Object.values(person);
+
+39. OBJECT ENTRIES
+
+JavaScript provides:
+
+Object.entries()
+
+It is used to work with an Object's key-value pairs.
+
+Example:
+
+let person = {
+    name: "John",
+    age: 25
+};
+
+Object.entries(person);
+
+We will study Object.keys(), Object.values(), and Object.entries() in detail later.
+
+40. IMPORTANT INTERVIEW RULES
+
+- An Object stores data using key-value pairs.
+- Objects are created commonly using {}.
+- An Object can contain multiple properties.
+- Properties can contain different data types.
+- Dot notation accesses a property directly.
+- Bracket notation is useful for dynamic property access.
+- person[key] uses the value stored in key.
+- person.key looks for a property literally named key.
+- New properties can be added after Object creation.
+- Existing properties can be updated.
+- The delete operator removes a property.
+- Accessing a missing property gives undefined.
+- Objects can contain Arrays.
+- Objects can contain other Objects.
+- Functions stored inside Objects are commonly called methods.
+- Symbols can be used as Object property keys.
+- Objects are reference values.
+- Two separately created Objects are different references.
+- Object.keys() works with Object keys.
+- Object.values() works with Object values.
+- Object.entries() works with key-value pairs.
+- Arrays are technically Objects in JavaScript.
+- Object properties can contain primitive values as well as other Objects and functions.
+
+41. IMPORTANT EXAMPLES
+
+let person = {
+    name: "John",
+    age: 25,
+    city: "Meerut"
+};
+
+person.name;
+
+person["name"];
+
+let key = "age";
+
+person[key];
+
+person.age = 30;
+
+person.city = "Delhi";
+
+delete person.age;
+
+let person = {
+    name: "John",
+    address: {
+        city: "Meerut",
+        country: "India"
+    }
+};
+
+let person = {
+    name: "John",
+    hobbies: ["Coding", "Reading", "Gaming"]
+};
+
+let person = {
+    name: "John",
+
+    greet: function() {
+        console.log("Hello");
+    }
+};
