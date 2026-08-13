@@ -1,0 +1,45 @@
+ARRAY — NOTES
+
+An array in JavaScript is an ordered collection used to store multiple values
+in a single variable. Array elements are accessed using zero-based indexes,
+meaning the first element is at index 0.
+
+Example:
+const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+Accessing elements:
+console.log(fruits[0]); // Apple
+console.log(fruits[2]); // Mango
+
+
+CREATING ARRAYS
+const numbers = [10, 20, 30, 40];
+const mixed = ["Hello", 100, true, null];
+const emptyArray = [];
+
+QUICK REFERENCE:
+push()       -> add to end
+pop()        -> remove from end
+unshift()    -> add to beginning
+shift()      -> remove from beginning
+length       -> get number of elements
+at()         -> get element by index
+includes()   -> check if value exists
+indexOf()    -> find index of value
+join()       -> array to string
+slice()      -> copy/extract part
+splice()     -> add/remove/replace
+concat()     -> combine arrays
+forEach()    -> run function for each element
+map()        -> transform into a new array
+filter()     -> select matching elements
+find()       -> get first matching element
+findIndex()  -> get index of first match
+some()       -> check if at least one matches
+every()      -> check if all match
+sort()       -> sort elements
+reverse()    -> reverse elements
+reduce()     -> reduce to one value
+flat()       -> flatten nested arrays
+flatMap()    -> map + flatten
+Array.isArray() -> check if value is an array
