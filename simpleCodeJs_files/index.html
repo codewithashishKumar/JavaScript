@@ -9,6 +9,8 @@
 
 <body>
     <p>JavaScript Essentials</p>
+    <p>using date methods as task</p>
+    <p id="date"></p>
 </body>
 <script defer>
     console.log("Hello");
@@ -37,6 +39,67 @@
     let radius = 5;
     let area = Math.floor(Math.PI * radius ** 2);
     console.log(area);
+    setInterval(() => {
+        const date = new Date();
+        const month = date.getMonth();
+        const todayDate = date.getDate();
+        let today = date.getDay();
+        const weekDay = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+        today = weekDay[today];
+        const year = date.getFullYear();
+        const hour = date.getHours();
+        const hour12 = hour % 12 || 12;
+        const ampm = hour >= 12 ? "PM" : "AM";
+        const minute = date.getMinutes();
+        const sec = date.getSeconds();
+        const text = `Today is ${today} - ${todayDate}/${month}/${year}  and time is ${hour12}:${minute}:${sec} ${ampm}`;
+        document.getElementById('date').innerHTML = text;
+    }, 0);
+
+    const Students = [
+        {
+            name: 'John',
+            score1: 47,
+            score2: 46,
+        },
+        {
+            name: 'Bob',
+            score1: 23,
+            score2: 24,
+        },
+        {
+            name: 'Alex',
+            score1: 40,
+            score2: 35,
+        },
+        {
+            name: 'Nick',
+            score1: 44,
+            score2: 45,
+        },
+    ];
+    const scores = [91, 81, 71, 61, 61];
+    const diploma = ['A', 'B', 'C', 'D', 'E'];
+
+    function calSUM(score1, score2) {
+        const sum = score1 + score2;
+        return sum;
+    }
+
+    // filter method
+    const users = [
+        { id: 1, name: "Rahul", age: 24, city: "Delhi", role: "Developer" },
+        { id: 2, name: "Priya", age: 27, city: "Mumbai", role: "Designer" },
+        { id: 3, name: "Aman", age: 24, city: "Bangalore", role: "Developer" },
+        { id: 4, name: "Neha", age: 29, city: "Pune", role: "Manager" },
+        { id: 5, name: "Arjun", age: 25, city: "Jaipur", role: "Tester" }
+    ];
+    // 
+    const result = users.filter((user) => {
+        return user.age === 24
+    });
+    console.log(result);
 </script>
 
 </html>

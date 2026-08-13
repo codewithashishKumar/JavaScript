@@ -32,6 +32,10 @@ for (const fruit of fruits) {
     console.log(fruit);
 }
 
+for (let i; i <= fruits.length; i++) {
+    console.log(i);
+    console.log(fruits[i]);
+}
 
 // for....in loop  - gives you the KEYS / property names.
 const person = {
