@@ -27,3 +27,14 @@ const greet = function() {
 const greet = () => {
     console.log("Hello");
 };
+
+a callback is a function passed as an argument to another function;
+A Higher-Order Function (HOF) is a function that takes another function as an argument or returns a function.
+Common HOFs in JavaScript
+forEach() → does something for each item
+map() → creates a new array
+filter() → creates a filtered array
+reduce() → reduces array to one value
+find() → finds an item
+some() → checks if any item matches
+every() → checks if all items match

@@ -118,3 +118,9 @@ for (let i = 0; i < prices.length; i++) {
 }
 console.log('----same array------');
 console.log(prices);
+prices.forEach((price) => {
+    const offer = price / 10;
+    price = price - offer;
+})
+console.log('----for each loop array------');
+console.log(prices)
