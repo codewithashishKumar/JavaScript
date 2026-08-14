@@ -1,0 +1,17 @@
+| Operation             | JavaScript           | Purpose                            | Example                              |
+| --------------------- | -------------------- | ---------------------------------- | ------------------------------------ |
+| **Select an element** | `getElementById()`   | Finds an element by its ID         | `document.getElementById("title")`   |
+| **Select elements**   | `querySelector()`    | Finds the first matching element   | `document.querySelector(".box")`     |
+| **Select multiple**   | `querySelectorAll()` | Finds all matching elements        | `document.querySelectorAll("p")`     |
+| **Change text**       | `textContent`        | Changes the text inside an element | `title.textContent = "Hello"`        |
+| **Change HTML**       | `innerHTML`          | Changes the HTML inside an element | `div.innerHTML = "<b>Hello</b>"`     |
+| **Change style**      | `style`              | Changes CSS properties             | `title.style.color = "red"`          |
+| **Add class**         | `classList.add()`    | Adds a CSS class                   | `box.classList.add("active")`        |
+| **Remove class**      | `classList.remove()` | Removes a CSS class                | `box.classList.remove("active")`     |
+| **Toggle class**      | `classList.toggle()` | Adds/removes a class               | `box.classList.toggle("active")`     |
+| **Change attribute**  | `setAttribute()`     | Adds or changes an HTML attribute  | `img.setAttribute("src", "pic.jpg")` |
+| **Get attribute**     | `getAttribute()`     | Reads an HTML attribute            | `img.getAttribute("src")`            |
+| **Create element**    | `createElement()`    | Creates a new HTML element         | `document.createElement("p")`        |
+| **Add element**       | `appendChild()`      | Adds an element to the DOM         | `div.appendChild(p)`                 |
+| **Remove element**    | `remove()`           | Removes an element                 | `p.remove()`                         |
+| **Add event**         | `addEventListener()` | Responds to user actions           | `btn.addEventListener("click", fn)`  |

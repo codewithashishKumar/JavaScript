@@ -1,0 +1,17 @@
+| Event       | Description                                       |
+| ----------- | ------------------------------------------------- |
+| `click`     | Fired when an element is clicked.                 |
+| `dblclick`  | Fired when an element is double-clicked.          |
+| `mouseover` | Fired when the mouse moves over an element.       |
+| `mouseout`  | Fired when the mouse leaves an element.           |
+| `mousemove` | Fired when the mouse moves over an element.       |
+| `keydown`   | Fired when a key is pressed.                      |
+| `keyup`     | Fired when a key is released.                     |
+| `submit`    | Fired when a form is submitted.                   |
+| `change`    | Fired when the value of an input element changes. |
+| `input`     | Fired whenever the value of an input changes.     |
+| `focus`     | Fired when an element gains focus.                |
+| `blur`      | Fired when an element loses focus.                |
+| `load`      | Fired when a page or resource finishes loading.   |
+| `resize`    | Fired when the browser window is resized.         |
+| `scroll`    | Fired when the page is scrolled.                  |
