@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .box {
+        height: 150px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+    <button id="reset">Rest</button>
+</body>
+<script>
+    let buttons = document.querySelectorAll('.box');
+
+    let winningData = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+    let playO = false;
+
+    buttons.forEach((box) => {
+        box.addEventListener('click', () => {
+            if (playO) {
+                box.innerHTML = 'O';
+                playO = false;
+            } else {
+                box.innerHTML = 'X';
+                playO = true;
+            }
+            box.disabled = true;
+            check();
+        })
+    });
+
+    const check = () => {
+        for (let winner of winningData) {
+            let one = buttons[winner[0]].innerHTML;
+            let two = buttons[winner[1]].innerHTML;
+            let three = buttons[winner[2]].innerHTML;
+
+            if (one === two && two == three && one != '') {
+                if (one === two && two === three) {
+                    console.log("winner is ", one);
+                    buttons.forEach((box) => {
+                        box.disabled = true;
+                    })
+                }
+            }
+        }
+    }
+</script>
+
+</html>
