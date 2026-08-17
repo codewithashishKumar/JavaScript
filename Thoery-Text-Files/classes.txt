@@ -1,0 +1,266 @@
+JAVASCRIPT CLASSES AND OBJECTS
+==============================
+1. CLASS
+--------
+A class is a blueprint/template for creating objects.
+Example:
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
+2. OBJECT
+---------
+An object is an instance of a class.
+Example:
+const person1 = new Person("Rahul", 20);
+const person2 = new Person("Aman", 22);
+console.log(person1.name); // Rahul
+console.log(person2.name); // Aman
+Person  = Class
+person1 = Object
+person2 = Object
+
+
+3. CONSTRUCTOR
+--------------
+A constructor is a special method that runs automatically when an object is created.
+Example:
+class Student {
+  constructor(name, rollNo) {
+    this.name = name;
+    this.rollNo = rollNo;
+  }
+}
+const student = new Student("Rahul", 101);
+console.log(student.name);   // Rahul
+console.log(student.rollNo); // 101
+
+
+4. THIS
+-------
+"this" refers to the current object.
+Example:
+class Car {
+  constructor(brand) {
+    this.brand = brand;
+  }
+  showBrand() {
+    console.log(this.brand);
+  }
+}
+const car1 = new Car("Toyota");
+const car2 = new Car("BMW");
+car1.showBrand(); // Toyota
+car2.showBrand(); // BMW
+
+
+5. METHOD
+---------
+A method is a function defined inside a class.
+Example:
+class Calculator {
+  add(a, b) {
+    return a + b;
+  }
+  multiply(a, b) {
+    return a * b;
+  }
+}
+const calc = new Calculator();
+console.log(calc.add(5, 3));      // 8
+console.log(calc.multiply(5, 3)); // 15
+
+
+6. INHERITANCE
+--------------
+Inheritance allows one class to get properties and methods from another class.
+The "extends" keyword is used for inheritance.
+Example:
+class Animal {
+  eat() {
+    console.log("Animal is eating");
+  }
+}
+class Dog extends Animal {
+  bark() {
+    console.log("Dog is barking");
+  }
+}
+const dog = new Dog();
+dog.eat();  // Animal is eating
+dog.bark(); // Dog is barking
+
+
+7. SUPER
+--------
+"super" is used to call the parent class constructor or methods.
+Example:
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+}
+const dog = new Dog("Tommy", "Labrador");
+console.log(dog.name);  // Tommy
+console.log(dog.breed); // Labrador
+
+
+8. GETTER
+---------
+A getter allows us to access a method like a property.
+Example:
+class Person {
+  constructor(name) {
+    this._name = name;
+  }
+  get name() {
+    return this._name;
+  }
+}
+const person = new Person("Rahul");
+console.log(person.name); // Rahul
+Use:
+person.name
+NOT:
+person.name()
+
+
+9. SETTER
+---------
+A setter allows us to change a property.
+Example:
+class Person {
+  constructor(name) {
+    this._name = name;
+  }
+  set name(newName) {
+    this._name = newName;
+  }
+  get name() {
+    return this._name;
+  }
+}
+const person = new Person("Rahul");
+person.name = "Aman";
+console.log(person.name); // Aman
+
+
+10. STATIC METHOD
+-----------------
+A static method belongs to the class itself, not to objects.
+Example:
+class MathHelper {
+  static add(a, b) {
+    return a + b;
+  }
+}
+console.log(MathHelper.add(10, 20)); // 30
+Call it using:
+MathHelper.add(10, 20)
+NOT:
+const obj = new MathHelper();
+obj.add(10, 20); // Error
+
+
+11. COMPLETE EXAMPLE
+--------------------
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  introduce() {
+    console.log(`I am ${this.name}, ${this.age} years old.`);
+  }
+}
+class Student extends Person {
+  constructor(name, age, course) {
+    super(name, age);
+    this.course = course;
+  }
+  study() {
+    console.log(`${this.name} is studying ${this.course}.`);
+  }
+}
+const student = new Student("Rahul", 20, "JavaScript");
+student.introduce();
+student.study();
+Output:
+I am Rahul, 20 years old.
+Rahul is studying JavaScript.
+
+
+IMPORTANT KEYWORDS
+------------------
+class       -> Creates a class
+new         -> Creates an object
+constructor -> Initializes an object
+this        -> Refers to the current object
+extends     -> Used for inheritance
+super       -> Calls the parent class
+get         -> Creates a getter
+set         -> Creates a setter
+static      -> Creates a class-level method
+
+
+CLASS vs OBJECT
+---------------
+
+| Class                             | Object                      |
+| --------------------------------- | --------------------------- |
+| Blueprint or template             | Instance of a class         |
+| Defines properties and methods    | Contains actual values      |
+| Created using `class` keyword     | Created using `new` keyword |
+| One class can create many objects | Each object is independent  |
+
+
+Example:
+class Car {
+  constructor(brand) {
+    this.brand = brand;
+  }
+}
+const car1 = new Car("Toyota");
+const car2 = new Car("BMW");
+Car  = Class
+car1 = Object
+car2 = Object
+
+
+
+EASY WAY TO REMEMBER
+--------------------
+Class = Blueprint
+Object = Actual thing made from blueprint
+Constructor = Initializes the object
+Property = Data of the object
+Method = Action/function of the object
+extends = Inheritance
+super = Parent class
+this = Current object
+
+
+
+
+BASIC STRUCTURE
+---------------
+class ClassName {
+  constructor(properties) {
+    this.property = properties;
+  }
+  method() {
+    // code
+  }
+}
+const object = new ClassName(value);
+object.method();
