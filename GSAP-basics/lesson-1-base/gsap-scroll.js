@@ -70,7 +70,7 @@ gsap.from('.page3 .box3', {
 // })
 
 gsap.to('.page4 .box4', {
-    transform: 'translate(-280%)',
+    x: '-290%',
     scrollTrigger: {
         trigger: '.page4',
         start: 'top 0%',
