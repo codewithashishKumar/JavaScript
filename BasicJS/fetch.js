@@ -71,3 +71,33 @@ btn.addEventListener("click", (evt) => {
 window.addEventListener("load", () => {
     updateExchangeRate();
 });
+
+
+// only console learning
+// fecthing methods 
+const url = `https://dummyjson.com/products`;
+fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+        console.log(data)
+    });
+
+
+// async/await use with fetch and try and catch 
+const api = `https://dummyjson.com/products`;
+const globalProducts = async () => {
+    try {
+        console.log('fetching');
+        const res = await fetch(api);
+        const data = await res.json();
+        console.log(data);
+        console.log('fetched');
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+globalProducts();

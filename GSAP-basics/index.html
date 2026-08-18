@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy;
+    }
+
+    html,
+    body {
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 100%;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    .box2 {
+        margin: 20px 0 0 0;
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+        overflow: hidden;
+        color: #fff;
+        margin: 20px 0 0 0;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        border: 0.5px solid #000;
+    }
+
+    .container1 {
+        background-color: green;
+    }
+
+    .container2 {
+        background-color: blue;
+    }
+
+    .container3 {
+        background-color: pink;
+    }
+
+    #nav {
+        display: flex;
+        background: pink;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+
+    #part2 {
+        display: flex;
+        gap: 50px;
+    }
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 100px;
+        white-space: nowrap;
+    }
+</style>
+
+<body>
+    <!-- <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis non nihil dolor, obcaecati repellendus
+        voluptas. Voluptatibus non voluptate quidem provident in et deserunt commodi, nemo distinctio modi repellendus
+        ducimus doloremque dolores repudiandae magnam fugiat perspiciatis molestiae aliquid eaque ad amet earum. Sed
+        beatae aut, atque asperiores temporibus earum itaque ducimus, in saepe quidem reprehenderit cumque, ipsam labore
+        quibusdam ipsum maxime fugit dolorum? Maxime omnis dolorum deserunt hic vel eligendi harum voluptatibus fuga
+        delectus illum, quasi odit non maiores quis, aspernatur amet veniam, minus ullam id! Enim iste, amet asperiores
+        rerum, earum nam similique totam accusantium ut ducimus provident consequatur animi.
+    </div>
+
+    <div class="box2">
+        <h2>Hello h2 here</h2>
+        <p>This is p element</p>
+    </div>
+    <div class="box3"></div>
+    <h1>h1 elemet</h1>
+    <h1>h1 elemet case 2</h1>
+    <h1>h1 elemet case 3</h1> -->
+
+    <!-- <div class="container1">1</div>
+    <div class="container2">2</div>
+    <div class="container3">3</div> -->
+
+    <div id="nav">
+        <h2>NavigationBar</h2>
+        <div id="part2">
+            <h4>Work</h4>
+            <h4>About</h4>
+            <h4>Courses</h4>
+            <h4>Contact</h4>
+        </div>
+    </div>
+    <h1>Learning GSAP</h1>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+<script>
+
+    // gsap.to() - Animates an element from its current state to the specified values.
+    // gsap.to('.box', {
+    //     x: 200,
+    //     duration: 1,
+    //     rotate: 90,
+    //     borderRadius: '50%',
+    //     scale: '1.5'
+    // });
+    // //gsap.from() - Animates an element from the specified values to its current state.
+    // gsap.from('.box2', {
+    //     opacity: 0,
+    //     y: 200,
+    //     x: -200,
+    //     duration: 1,
+    //     rotate: 90,
+    //     repeat: -1,
+    //     yoyo: true
+    // });
+
+    // //gsap.fromTo() - Allows you to define both the starting and ending states.
+
+    // // gsap.fromTo(".box3",
+    // //     { x: 0, opacity: 0 },
+    // //     { x: 350, opacity: 1, duration: 2, repeat: -1, rotate: 360 },
+    // // );
+
+    // // stagger - allows you to let animate one after other if we have same elements
+    // gsap.from('h1', {
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //     y: 100,
+    //     yoyo: true,
+    //     repeat: -1,
+    //     ease: 'none'
+    // });
+
+    // // GSAP Timeline - A timeline is useful when you want to run multiple animations in a specific sequence.
+    // const tl = gsap.timeline();
+
+    // tl.fromTo(".box3",
+    //     {
+    //         x: 0,
+    //         opacity: 0
+    //     },
+    //     {
+    //         x: 350,
+    //         opacity: 1,
+    //         duration: 2
+    //     }
+    // );
+
+    // tl.to(".box3", {
+    //     rotate: 360,
+    //     duration: 1,
+    //     repeat: -1,
+    //     delay: -1,
+    //     ease: "none",
+    // });
+
+
+    // gsap.to('.container1', {
+    //     x: 1000,
+    //     rotate: 360,
+    //     duration: 2,
+    //     delay: 1
+    // })
+    // gsap.to('.container2', {
+    //     x: 1000,
+    //     rotate: 360,
+    //     duration: 2,
+    //     delay: 3,
+    //     backgroundColor: 'yellow',
+    // })
+    // gsap.to('.container3', {
+    //     x: 1000,
+    //     scale: 0.5,
+    //     rotate: 360,
+    //     borderRadius: '50%',
+    //     duration: 2,
+    //     delay: 5,
+    // });
+
+    // const timeline = gsap.timeline();
+    // timeline.to('.container1', {
+    //     x: 1000,
+    //     rotate: 360,
+    //     duration: 2,
+    //     delay: 1
+    // })
+    // timeline.to('.container2', {
+    //     x: 1000,
+    //     rotate: 360,
+    //     duration: 2,
+    //     backgroundColor: 'yellow',
+    // })
+    // timeline.to('.container3', {
+    //     x: 1000,
+    //     scale: 0.5,
+    //     rotate: 360,
+    //     borderRadius: '50%',
+    //     duration: 2,
+    // })
+
+    const navTimeline = gsap.timeline();
+
+    navTimeline.from('h2', {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.5
+    });
+    navTimeline.from('h4', {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3
+    });
+
+    navTimeline.from('h1', {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        scale: 0
+    });
+
+</script>
+
+
+</html>

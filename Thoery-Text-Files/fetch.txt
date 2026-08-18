@@ -1,0 +1,21 @@
+Fetch API: A built-in JavaScript interface that provides a simple way to make asynchronous HTTP requests using the fetch() function.
+
+
+Basic Syntax - 
+fetch(url)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+Example -
+
+const url =   https://dummyjson.com/products
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error("Error:", error);
+});
